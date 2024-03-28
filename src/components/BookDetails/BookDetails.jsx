@@ -41,6 +41,10 @@ const BookDetails = () => {
                       <span>{book.rating}</span>
                    </h2>
                 </div>
+                <div>
+                    <button className="btn mr-3 border ">Read</button>
+                    <button className="btn mr-3 border bg-[#50B1C9] text-white hover:border-[#50B1C9] hover:text-black hover:bg-transparent">Wishlist</button>
+                </div>
             </div>
         </div>
     );

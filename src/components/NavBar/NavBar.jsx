@@ -3,9 +3,9 @@ import './Nav.css';
 const NavBar = () => {
     const links = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
-        <li><NavLink to={"/statistics"}>Listed Books</NavLink></li>
-        <li><NavLink to={"/applied"}>Pages to Read</NavLink></li>
-        <li><NavLink to={"/blog"}>Author</NavLink></li>
+        <li><NavLink to={"/listedbooks"}>Listed Books</NavLink></li>
+        <li><NavLink to={"/pageread"}>Pages to Read</NavLink></li>
+        <li><NavLink to={"/author"}>Author</NavLink></li>
         <li><NavLink to={"/blog"}>Blog</NavLink></li>
      </>
     return (
@@ -19,7 +19,7 @@ const NavBar = () => {
                     {links}
                 </ul>
             </div>
-            <a className="btn btn-ghost text-2xl md:text-3xl font-bold">Book Vibe</a>
+            <a className="btn btn-ghost text-xl md:text-3xl font-bold">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -27,8 +27,8 @@ const NavBar = () => {
             </ul>
             </div>
             <div className="navbar-end md:flex gap-2">
-            <a className="btn bg-[#23BE0A] text-white hover:border-[#23BE0A] hover:bg-transparent hover:text-black">Sign In</a>
-            <a className="btn bg-[#59C6D2] text-white hover:border-[#59C6D2] hover:bg-transparent hover:text-black">Sign Up</a>
+            <a className="btn bg-[#23BE0A] text-white hover:border-[#23BE0A] hover:bg-transparent hover:text-black md:py-[18px] md:px-7">Sign In</a>
+            <a className="btn bg-[#59C6D2] text-white hover:border-[#59C6D2] hover:bg-transparent hover:text-black md:py-[18px] md:px-7">Sign Up</a>
             </div>
       </div>
     );

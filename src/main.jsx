@@ -8,6 +8,10 @@ import './index.css';
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import ListedBooks from './components/ListedBooks/ListedBooks';
+import PageToRead from './components/PageToRead/PageToRead';
+import Authors from './components/Authors/Authors';
+import Blog from './components/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +23,23 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>
       },
+      {
+        path: "/listedbooks",
+        element: <ListedBooks></ListedBooks>
+      },
+      {
+        path: "/pageread",
+        element: <PageToRead></PageToRead>
+      },
+      {
+        path: "/author",
+        element: <Authors></Authors>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      }
+
     ]
   },
 

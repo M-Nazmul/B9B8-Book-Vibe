@@ -1,3 +1,8 @@
+.navbar ul a{
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 4px;
+}
 .navbar ul a.active{
     border: 1px solid lightgreen;
     background-color: transparent !important;

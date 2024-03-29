@@ -4,7 +4,7 @@ import AuthorDetails from "../AuthorDetails/AuthorDetails";
 const Authors = () => {
     const [authors, setAuthors] = useState([]);
     useEffect(() => {
-        fetch('../../../public/books.json')
+        fetch('./books.json')
         .then(res => res.json())
         .then(data => setAuthors(data))
     },[])

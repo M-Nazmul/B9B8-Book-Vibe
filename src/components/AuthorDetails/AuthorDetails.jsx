@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const AuthorDetails = ({authorDet}) => {
     const {author, bookName} = authorDet;
-    console.log(authorDet);
+    // console.log(authorDet);
   return (
     <div>
         <div className="card mx-auto w-[80%] md:w-96 bg-base-100 shadow-xl">

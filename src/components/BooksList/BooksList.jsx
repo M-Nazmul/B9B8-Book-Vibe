@@ -7,7 +7,7 @@ const BooksList = ({book}) => {
     
     return (
         <div className='mx-auto'>
-            <Link to={`/booklist/${id}`}>
+            <Link to={`/book/${id}`}>
             <div className="card max-w-96 bg-base-100 shadow-xl p-6  border">
                 <figure className='bg-[#F3F3F3] p-7 rounded-2xl'><img src={image} alt="Books" /></figure>
                 <div className="flex flex-col md:w-[300px]">

@@ -1,11 +1,39 @@
+import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveBook } from "./Utility/localstorage";
+
 
 const BookDetails = () => {
     const books = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
     const book = books.find(book => book.id === idInt);
-    console.log(book);
+    // console.log(book);
+
+    const [clickRead, setClickRead] = useState(false)
+    const handleRead = () =>{
+        saveBook(idInt);
+        if(!clickRead){
+            setClickRead(toast.success('Books Added to Read list'));
+        }
+        else{
+            setClickRead(toast.error('You have Already Read this book!'));
+        }
+    };
+    const [clickWish, setClickWish] = useState(false)
+    const handleWish = () =>{
+        saveBook(idInt);
+        if(!clickWish){
+            setClickWish(toast.success('Books Added to Wishlist!'));
+        }
+        else{
+            setClickWish(toast.error('You have Already this book!'));
+        }
+    };
+    
+
     return (
         <div className="my-12 grid gap-6 grid-cols-1 md:grid-cols-2 px-4">
             <div className=" md:max-w-lg p-8 md:p-16 border bg-slate-50 rounded-2xl grid-cols-2 md:grid-cols-1">
@@ -42,10 +70,11 @@ const BookDetails = () => {
                    </h2>
                 </div>
                 <div>
-                    <button className="btn mr-3 border ">Read</button>
-                    <button className="btn mr-3 border bg-[#50B1C9] text-white hover:border-[#50B1C9] hover:text-black hover:bg-transparent">Wishlist</button>
+                    <button onClick={handleRead} className="btn mr-3 border ">Read</button>
+                    <button onClick={handleWish} className="btn mr-3 border bg-[#50B1C9] text-white hover:border-[#50B1C9] hover:text-black hover:bg-transparent">Wishlist</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

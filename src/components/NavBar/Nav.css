@@ -2,11 +2,12 @@
     font-size: 18px;
     font-weight: 400;
     margin-right: 4px;
+    padding: 14px 20px;
 }
 .navbar ul a.active{
-    border: 1px solid lightgreen;
+    border: 1px solid #23BE0A;
     background-color: transparent !important;
-    color: lightgreen !important;
+    color: #23BE0A !important;
     font-weight: 600;
     font-size: 18px;
 }
